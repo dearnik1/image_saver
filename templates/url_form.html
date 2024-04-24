@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter URL</title>
+    <!-- Add other head elements like stylesheets, scripts, etc. -->
+</head>
+<body>
+    <h2>Enter URL</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
