@@ -4,10 +4,10 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/', include('authapp.urls')),
+    path('auth/', include('apps.authapp.urls')),
     path('login/', auth_views.LoginView.as_view(
         template_name='login.html',
         next_page='/url_form/'
     ), name='login'),
-    path('url_form/', include('urlapp.urls')),
+    path('url_form/', include('apps.urlapp.urls')),
 ]
